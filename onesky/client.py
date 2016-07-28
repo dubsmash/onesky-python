@@ -24,7 +24,7 @@ class Client:
 
         dev_hash = hashlib.md5()
         dev_hash.update(timestamp)
-        dev_hash.update(self.api_secret)
+        dev_hash.update(self.api_secret.encode())
 
         return {
             'api_key': self.api_key,
