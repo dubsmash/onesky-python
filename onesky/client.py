@@ -20,7 +20,7 @@ class Client:
         self.request_callback = request_callback
 
     def create_auth_variables(self):
-        timestamp = str(int(time.time()))
+        timestamp = str(int(time.time())).encode()
 
         dev_hash = hashlib.md5()
         dev_hash.update(timestamp)
